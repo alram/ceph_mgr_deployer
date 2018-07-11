@@ -19,7 +19,6 @@ def list():
             host_drives_infos[device]['size_byte'] = int(read_all(path_prefix + 'size')) * int(read_all(path_prefix + 'queue/hw_sector_size'))
             host_drives_infos[device]['model'] = read_all(path_prefix + 'device/model').strip()
             host_drives_infos[device]['vendor'] = read_all(path_prefix + 'device/vendor').strip()
-            host_drives_infos[device]['vendor'] = read_all(path_prefix + 'device/vendor').strip()
             host_drives_infos[device]['rotational'] = read_all(path_prefix + 'queue/rotational').strip()
             #XXX implement below; check if mounted and if OSD -> whoami
             host_drives_infos[device]['used'] = 'N/A'
